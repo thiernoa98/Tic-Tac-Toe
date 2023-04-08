@@ -13,28 +13,21 @@ let boardObjArr = [];
 function play() {
     
     for (let i = 0; i < squareDivs.length; i++) {
+        //resest the previous data
         squareDivs[i].innerHTML = '';
 
-        // 6B. Loop the array of class .square divs and assign each square a listener to call 
-        //the addXO() func when clicked
         squareDivs[i].addEventListener('click', addXO)   
 
-        //6C. make the div text uncopiable
         squareDivs[i].style = 'none';
 
-        //6D store 'i' on the square as its id property
-        //setting ids to quare divs
         squareDivs[i].id = i;
 
-        //remove the highlighted text, reset the green 
         squareDivs[i].classList.remove('winner');
     }
-    // 7. declare the id to compare it to
+    // declare the ids to compare it to
     boardObjArr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-    // 8. Update the feedback green text to say: "X's Turn!"
-
-    //9. dispolay good luck after click
+    //dispolay good luck after click
     feedback.innerHTML = 'Good luck!'
 }
 
