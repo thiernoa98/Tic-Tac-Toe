@@ -1,39 +1,17 @@
-// Lesson 07.05 - Tic-Tac-Toe Challenge - PROG
-// for pair programming 
-
-// Get the necessary DOM elements
-
-// 0. Get the New Game button
+// Getting the necessary DOM elements
 const newGameBtn = document.querySelector('button');
 newGameBtn.addEventListener('click', play);
-// 1. Get the green feedback txt box
 const feedback = document.getElementById('feedback');
-
-// 2. Get ALL 9 class .square divs at once as an array using querySelectorAll
 const squareDivs = document.querySelectorAll('.square');
 
-// 3. Loop the array of class .square divs and assign each square a listener to call 
-//the addXO() func when clicked
-// for (let i = 0; i < squareDivs.length; i++) {
-//     squareDivs[i].addEventListener('click', addXO)
-// }
-
-// Define necessary gameplay variables
-
-// 4. Variable for keeping track of whose turn it is (X or O)
-//    And a var for counting total moves so that you know when to check for winner
+//Adding a variabl;e for counting total moves
 let xTurn = true;
 let moves = 0;
 
-// 5. Object / array for storing the board of 9 squares; during game play, 
-//the object will be updated to store X's and O's in the object
-
 let boardObjArr = [];
 
-// Define play() func which runs when user clicks New Game btn
 function play() {
     
-    // 6. clear all the X's and O's from the squares for a fresh game
     for (let i = 0; i < squareDivs.length; i++) {
         squareDivs[i].innerHTML = '';
 
